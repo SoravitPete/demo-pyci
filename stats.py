@@ -1,3 +1,5 @@
+from math import sqrt
+
 def variance(data):
     """Returns the population variance of a list (array) of numbers in data.
     
@@ -30,7 +32,7 @@ def variance(data):
     # some deliberately misformatted code. Use flake8 to fix.
     n=len(data)  
     if n==0:
-        raise TypeError( )
+        raise ValueError( )
     average = sum(data)/n
     return sum( [(x-average)**2 for x in data] )/n
 
